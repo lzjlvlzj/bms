@@ -19,7 +19,7 @@ public class Demo implements Serializable{
 	@Column(name = "id", unique = true, nullable = false)
 	private Integer id;
 	private String name;
-	private Date createTime;
+	private Date createTime; 
 	public Integer getId() {
 		return id;
 	}
