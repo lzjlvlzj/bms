@@ -12,7 +12,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 public class Demo implements Serializable{
 
-	 
+	  
 	private static final long serialVersionUID = -241624984113618469L;
 	@Id
     @GeneratedValue(strategy = IDENTITY)
