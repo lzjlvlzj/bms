@@ -22,7 +22,7 @@ public class Demo implements Serializable{
 	private Date createTime; 
 	public Integer getId() {
 		return id;
-	}
+	} 
 	public void setId(Integer id) {
 		this.id = id;
 	}
