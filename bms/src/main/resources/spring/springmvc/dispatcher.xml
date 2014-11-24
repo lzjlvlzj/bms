@@ -58,13 +58,13 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 		</property>
 	</bean> -->
 	<!-- <bean id="content" class="com.foo.samples.rest.SampleContentAtomView" /> -->
-	
+	  
 	<!-- 统一异常处理 -->
 	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
 		<!-- 异常类名称 -->
 		<property name="exceptionMappings">
 			<props>
-				<prop key="java.lang.NullPointerException">null</prop>
+				<prop key="java.lang.NullPointerException">exception/null</prop>
 				<prop key="java.io.IOException">io</prop>
 			</props>
 		</property>
@@ -73,7 +73,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 		<!-- 定义发生异常时的状态码 -->
 		<property name="statusCodes">
 			<props>
-				<prop key="null">503</prop>
+				<prop key="exception/null">503</prop>
 				<prop key="io">500</prop>
 			</props>
 		</property>
