@@ -4,14 +4,17 @@ import java.io.Serializable;
 import java.util.List;
 
 
+
 import org.lzj.bms.persist.BaseDao;
 import org.lzj.bms.service.BaseService;
 
 public abstract class BaseServiceImpl<T extends Object, PK extends Serializable>
 		implements BaseService<T, PK> {
-	/**
-	 * 使用者实现
-	 * */
+	
+	public T findById(PK id) {
+		return getDao().findById(id);
+	}
+
 	public abstract BaseDao<T, PK> getDao();
 
 	public int count() {

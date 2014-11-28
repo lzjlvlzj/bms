@@ -21,7 +21,6 @@ public class DemoServiceImpl extends BaseServiceImpl<Demo, Integer> implements
 	public BaseDao<Demo, Integer> getDao() {
 		return demoDaoImpl;
 	}
-
 	
 
 }

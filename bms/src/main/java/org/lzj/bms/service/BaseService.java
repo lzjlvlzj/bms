@@ -3,13 +3,61 @@ package org.lzj.bms.service;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * @author ack
+ *
+ * @param <T>
+ * @param <PK>
+ */
+/**
+ * @author ack
+ *
+ * @param <T>
+ * @param <PK>
+ */
+/**
+ * @author ack
+ *
+ * @param <T>
+ * @param <PK>
+ */
+/**
+ * @author ack
+ *
+ * @param <T>
+ * @param <PK>
+ */
+/**
+ * @author ack
+ *
+ * @param <T>
+ * @param <PK>
+ */
+/**
+ * @author ack
+ *
+ * @param <T>
+ * @param <PK>
+ */
+/**
+ * @author ack
+ *
+ * @param <T>
+ * @param <PK>
+ */
+/**
+ * @author ack
+ *
+ * @param <T>
+ * @param <PK>
+ */
 public interface BaseService <T extends Object, PK extends Serializable>{
 	
 	/**
 	 * @param id
 	 * @return
 	 */
-	public T load(PK id);
+    public T load(PK id);
 	 
     /**
      * @param t
@@ -45,5 +93,12 @@ public interface BaseService <T extends Object, PK extends Serializable>{
      * @return
      */
     public int count();
+    
+    
+    /**
+     * @param id
+     * @return T
+     */
+    public T findById(PK id);
 	
 }
