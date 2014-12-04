@@ -42,12 +42,12 @@
             </list>  
         </property>
     </bean>
-    
+    <context:component-scan base-package="org.lzj.bms" >
+    	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
     <bean id="txManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
   		<property name="sessionFactory" ref="sessionFactory" />
  	</bean>
-	<!-- 扫描包 -->
- 	<context:component-scan base-package="org.lzj.bms"></context:component-scan>
  	<!-- srping 注解事物 -->
  	<tx:annotation-driven transaction-manager="txManager"/> 
  	<tx:advice id="baseServiceAdvice" transaction-manager="txManager">

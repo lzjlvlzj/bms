@@ -11,13 +11,15 @@ http://www.springframework.org/schema/mvc
 http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
 	<!-- 开启注解处理器 -->
-	<context:annotation-config />
-	<!-- <context:component-scan base-package="org.lzj.bms"></context:component-scan> -->
-	<bean id="handlerMapping" class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
-	<bean id="handlerAdapter" class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+	<!-- <context:annotation-config /> -->
+	<!-- 扫描包 设置成false 防止重新加载bean事物失败-->
 	
-	<!-- <mvc:annotation-driven />
-	 -->
+	<context:component-scan base-package="org.lzj.bms.web.controller" />
+	<!-- <bean id="handlerMapping" class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+	<bean id="handlerAdapter" class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" /> -->
+	
+	<mvc:annotation-driven />
+	
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
